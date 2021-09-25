@@ -1,0 +1,87 @@
+extends layout.pug
+
+block content
+    div.container
+        br
+        div.center(
+            style="margin: 0 auto; width:500px; border-style: solid; border-color: #f2f2f2; background-color: #FFFFFF;"
+        )
+                div.row(
+                    style= "margin: 0 auto; color:#FFFFFF; width:500px; background-color: #4caf50;"
+                )
+                h3 Registration Form
+			
+                br
+                form.form-horizontal
+                        //action = "insertDB.php" method = "post" >   <!--calls insertDB.php so as to insert or save the relevant data into the dataBase together with the scanned id itself NB: in here for the id its already defined
+                        div.control-group
+                            label.control-label ID
+                                div.controls
+                                    textarea#getUID(
+                                    name="id"
+                                    placeholder= "Please Scan your Card/Key Chain to display ID"
+                                    rows="1" 
+                                    cols="1" 
+                                    required
+                                )
+                        div.control-group
+                            label.control-label Name
+                                div.controls
+                                    input(
+                                        name="name"
+                                        type="text"
+                                        placeholder="Name"
+                                        required
+                                    )
+                        div.control-group
+                            label.control-label NRC
+                                div.controls
+                                    input(
+                                        name="nrc"
+                                        type="text"
+                                        placeholder="123456/10/1"
+                                        required
+                                    )
+                        div.control-group
+                            label.control-label Gender
+                                div.controls
+                                    select.gender
+                                        option.value Male
+                                        option.value Female
+                        div.control-group
+                            label.control-label Class
+                                div.controls
+                                    input.class(
+                                        type='text'
+                                        name='class'
+                                        placeholder='Driving licence Class'
+                                        required
+                                    )
+                        div.control-group
+                            label.control-label Issued
+                                div.controls
+                                    input.class(
+                                        type='date'
+                                        name='issued'
+                                        placeholder='Date of Issuance'
+                                        required
+                                    )
+                        div.control-group
+                            label.control-label Expire
+                                div.controls
+                                    input.class(
+                                        type='date'
+                                        name='expire'
+                                        placeholder='Date of Expiration'
+                                        required
+                                    )
+                        div.control-group
+                            label.control-label Nationality
+                                div.controls
+                                    input(
+                                        type='text'
+                                        name='nationality'
+                                        required
+                                    )
+                        div.form-actions
+                            button.btn-btn-success Save

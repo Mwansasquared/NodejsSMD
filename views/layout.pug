@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+      meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet', href='css/bootstrap.min.css')
+      link(rel='stylesheet', href='css/style.css', type='text/css')
+      //-link(href='/css/ bootstrap-overrides.css', type='text/css', rel='stylesheet')
+      //style
+        include ./style.css
+      
+      
+body
+    h2 SMART DRIVERS LICENSE SYSTEM [S.M.D]
+
+    nav.topnav
+        //-a.navbar-brand(href='/')
+        ul.topnav
+          li
+            a(href='/') Home
+          li
+            a(href='/registration') Register User
+          li
+            a(href='/read-tag') Read Tag ID
+          li
+            a(href='/user-data') User Data
+
+
+    block content
+
+    block footer
+      footer.footer(style="margin: 35px 0 15px 0; text-align: center"
+      )
+        copyright Smart Driving Licence

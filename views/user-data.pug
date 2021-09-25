@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    div.container
+        div.row
+            h3 User Data Table
+        div.row
+            table.table.table-striped.table-bordered
+                thead
+                    tr(
+                        bgcolor="#4caf50"
+                        color="#FFFFFF"
+                    )
+                        th Name
+                        th ID
+                        th NRC
+                        th Gender
+                        th Class
+                        th Issued
+                        th Expire
+                        th Nationality
+                        th Action
+                tbody
+                    //- console.log info from database
