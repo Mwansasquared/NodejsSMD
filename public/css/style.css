@@ -5,12 +5,12 @@ html {
     text-align: center;
 }
 
-body{
-    background-image:url("images/smd.png");
+body {
+    background-image: url("../images/smd.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -23,7 +23,9 @@ ul.topnav {
     width: 100%;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {
+    float: left;
+}
 
 ul.topnav li a {
     display: block;
@@ -33,15 +35,22 @@ ul.topnav li a {
     text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active){
+ul.topnav li a:hover:not(.active) {
     background-color: #3e8e41;
 }
 
-ul.topnav li a.active {background-color: #333;}
+ul.topnav li a.active {
+    background-color: #333;
+}
 
-ul.topnav li.right {float: right;}
+ul.topnav li.right {
+    float: right;
+}
 
 @media screen and (max-width: 600px) {
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
+
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+    }
 }
