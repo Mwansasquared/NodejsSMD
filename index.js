@@ -3,12 +3,12 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
-//app.use(express.static(__dirname + '/public'));
-app.set('views', path.join(__dirname, '/views'));
+//app.use(express.static(__dirname + '/public')); 
 app.set('view engine', 'pug');
-app.use('/static', express.static(path.join(__dirname, '/public')));
+app.set('views', path.join(__dirname, './views'));
+app.use(express.static(path.join(__dirname, "./public/")));
 //app.use(express.static('public'));
-
+ 
 // In your html, note absolute path
 //href='./css/style.css'
 
