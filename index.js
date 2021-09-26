@@ -3,20 +3,22 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
+/**
+ *  App Configuration
+ */
 //app.use(express.static(__dirname + '/public'));
+/* //GET /style.css and images
+ */
+app.use(express.static(path.join(__dirname, "public")));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
-app.use('/static', express.static(path.join(__dirname, '/public')));
 //app.use(express.static('public'));
 
-// In your html, note absolute path
-//href='./css/style.css'
-
+/**
+ * Routes Definitions
+ */
 var homeRouter = require('./routes/home');
 app.use('/', homeRouter);
-
-//const navbarRouter = require('./routes/navbar');
-//app.use('/navbar', navbarRouter);
 
 const registerRouter = require('./routes/registration');
 app.use('/registration', registerRouter);
@@ -27,10 +29,9 @@ app.use('/read-tag', readTagRouter);
 const userDataRouter = require('./routes/user-data');
 app.use('/user-data', userDataRouter);
 
-//app.get("/", (req, res) => {
-  //res.send("Hello Mwansa!");
-//});
-
+/**
+ * Port listening
+ */
 app.listen(port, () => {
   console.log("Server Started...");
 });

@@ -4,70 +4,27 @@ html
     title= title
       meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
       meta(name='viewport', content='width=device-width, initial-scale=1.0')
-      link(rel='stylesheet' href='css/bootstrap.min.css')
-      link(rel='stylesheet' href='css/style.css' type='text/css')
+      link(rel='stylesheet' href='/css/bootstrap.min.css')
+      link(rel='stylesheet' href='/css/style.css' type='text/css')
       //-link(href='/css/ bootstrap-overrides.css', type='text/css', rel='stylesheet')
-      //-style.
-        html{
-        font-family: Arial;
-        display: inline-block;
-        margin: 0px auto;
-        text-align: center;
-        }
-        body{
-          background-image:url("/images/smd.png");
-          height: 100%;
-          background-position: center;
-          background-repeat: no-repeat;background-attachment:fixed;
-          background-size: cover;
-        }
-        ul.topnav {
-            list-style-type: none;
-            margin: auto;
-            padding: 0;
-            overflow: hidden;
-            background-color: #4caf50;
-            width: 100%;
-        }
-        ul.topnav li {float: left;}
-        ul.topnav li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 130px;
-          text-decoration: none;
-          }
-        ul.topnav li a:hover:not(.active){
-          background-color: #3e8e41;
-        }
-        ul.topnav li a.active {background-color: #333;}
-        ul.topnav li.right {float: right;}
-
-        footer.footer{margin: 35px 0 15px 0; text-align: center}
-        
-        @media screen and (max-width: 600px) {
-          ul.topnav li.right, ul.topnav li {float: none;}
-        }
       
-body
-    h2 SMART DRIVERS LICENSE SYSTEM [S.M.D]
-
-    nav.topnav
-        //-a.navbar-brand(href='/')
-        ul.topnav
-          li
-            a(href='/') Home
-          li
-            a(href='/registration') Register User
-          li
-            a(href='/read-tag') Read Tag ID
-          li
-            a(href='/user-data') User Data
+  body
+      h2(style ="margin: 35px 0 15px 0; text-align: center") SMART DRIVERS LICENSE SYSTEM [S.M.D]
+      
+      ul.topnav
+            li
+              a(href='/') Home
+            li
+              a(href='/registration') Register User
+            li
+              a(href='/read-tag') Read Tag ID
+            li
+              a(href='/user-data') User Data
 
 
-    block content
+      block content
 
-    block footer
-      footer.footer(style="margin: 35px 0 15px 0; text-align: center"
-      )
-        copyright Smart Driving Licence
+      block footer
+        footer.footer(style="margin: 35px 0 15px 0; text-align: center"
+        )
+          copyright Smart Driving Licence
