@@ -2,13 +2,18 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 /**
  * Routes Definitions
  */
 
-//app.use(express.static(__dirname + '/public')); 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './views'));
 //GET /style.css and images
@@ -27,6 +32,7 @@ app.use('/read-tag', readTagRouter);
 const userDataRouter = require('./routes/user-data');
 app.use('/user-data', userDataRouter);
 
+module.exports = app;
 /**
  * Port listening
  */
