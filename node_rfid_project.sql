@@ -1,0 +1,16 @@
+CREATE TABLE Drivers
+(ID INT(11) NOT NULL, fullname VARCHAR(255) NOT NULL,
+NRC VARCHAR(255) NOT NULL, Gender VARCHAR(255) NOT NULL,
+Class VARCHAR(255) NOT NULL, Issued VARCHAR(255) NOT NULL,
+Expire VARCHAR(255) NOT NULL, Nationality VARCHAR(255) NOT NULL,
+`created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`updated_at` DATETIME on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (`ID`),
+INDEX `idx_NRC` (`NRC`),
+UNIQUE `idx_quote_uniqie` (`quote`)
+)
+ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
+
+INSERT INTO Drivers (
+    ID, fullname, NRC, Gender, Class, Issued, Expire, Nationality) VALUES
+(`17110794`, `muma`, `76555/16/1`, `Male`, `B`, `2021-07-25`, `2021-07-27`, `ZT`);
