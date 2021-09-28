@@ -21,4 +21,16 @@ block content
                         th Nationality
                         th Action
                 tbody
-                    //- console.log info from database
+                        //- console.log info from database
+                        for driver in Drivers
+                        tr
+                            //-td
+                                img.ui.mini.rounded.image(src=driver.picture.thumbnail)
+                            td #{driver.name.first}
+                            td #{driver.name.last}
+                            td #{driver.email}
+                            td #{driver.phone}
+                            td #{driver.location.city}
+                tfoot
+                        tr
+                            th(colspan='6')

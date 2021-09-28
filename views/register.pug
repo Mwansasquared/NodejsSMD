@@ -12,8 +12,7 @@ block content
                 h3 Registration Form
 			
                 br
-                form.form-horizontal
-                        //action = "insertDB.php" method = "post" >   <!--calls insertDB.php so as to insert or save the relevant data into the dataBase together with the scanned id itself NB: in here for the id its already defined
+                form.form-horizontal(role='form' action='/registration' method = 'POST')
                         div.control-group
                             label.control-label ID
                                 div.controls

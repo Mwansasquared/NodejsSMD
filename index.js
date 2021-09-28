@@ -3,13 +3,11 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 
-
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 /**
  * Routes Definitions
  */
@@ -24,7 +22,7 @@ var homeRouter = require('./routes/home');
 app.use('/', homeRouter);
 
 const registerRouter = require('./routes/registration');
-app.use('/registration', registerRouter);
+app.use('/register', registerRouter);
 
 const readTagRouter = require('./routes/read-tag');
 app.use('/read-tag', readTagRouter);
